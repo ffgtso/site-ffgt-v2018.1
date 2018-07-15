@@ -6,11 +6,11 @@
 ##	GLUON_SITE_FEEDS
 #		for each feed name given, add the corresponding PACKAGES_* lines
 #		documented below
-GLUON_SITE_FEEDS='ffgt'
+#GLUON_SITE_FEEDS='ffgt'
 
 ##	PACKAGES_$feedname_REPO
 #		the  git repository from where to clone the package feed
-PACKAGES_FFGT_REPO=https://github.com/ffgtso/ffgt_packages-v2016.2.git
+#PACKAGES_FFGT_REPO=https://github.com/ffgtso/ffgt_packages-v2016.2.git
 
 
 ##	PACKAGES_$feedname_COMMIT
