@@ -2,7 +2,11 @@ Release Notes for gluon-ffgt-@@RELEASE@@
 
 This Freifunk Firmware is based off Gluon v2018.1 and modified by several additional, non-standard modules:
 
- - none, yet
+ - modified $GLUON/package/gluon-setup-mode/luasrc/lib/gluon/upgrade/320-setup-ifname
+   and $GLUON/package/gluon-setup-mode/files/lib/gluon/setup-mode/rc.d/S20network so
+   that node a) uses WAN (if existing) for setup mode and b) is DHCP client — just like
+   in Freifunk mode.
+   Commit: https://github.com/ffgtso/gluon-ffgt-v2018.1/commit/f302ababc07fd6cbe93e758d05b7704a9507f639
 
 
 Further Build Information:
