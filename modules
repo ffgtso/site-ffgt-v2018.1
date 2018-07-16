@@ -19,3 +19,9 @@
 
 ##  PACKAGES_$feedname_BRANCH
 #   the branch to check out
+
+
+GLUON_SITE_FEEDS="ssidchanger"
+PACKAGES_SSIDCHANGER_REPO=https://github.com/freifunk-nord/gluon-ssid-changer.git
+PACKAGES_SSIDCHANGER_COMMIT=222b96a30259a03ca8ecdb173d9d326077a6efec
+PACKAGES_SSIDCHANGER_BRANCH=2018.1.x
