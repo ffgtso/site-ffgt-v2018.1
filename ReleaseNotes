@@ -8,9 +8,21 @@ This Freifunk Firmware is based off Gluon v2018.1 and modified by several additi
    in Freifunk mode.
    Commit: https://github.com/ffgtso/gluon-ffgt-v2018.1/commit/f302ababc07fd6cbe93e758d05b7704a9507f639
 
- - gluon-ssid-changer (see https://github.com/Freifunk-Nord/gluon-ssid-changer/tree/2018.1.x);
-   for commit etc. see modules file
+ - gluon-ssid-changer
 
- - ffgt-banner supplies a pimped motd file, including info about the HW, the OS and the FW version
-   
+   See https://github.com/Freifunk-Nord/gluon-ssid-changer/tree/2018.1.x -- for commit etc. see modules file
+
+ - ffgt-banner
+
+   Supplies a pimped motd file, including info about the HW, the OS and the FW version
+
+ - ffgt-geolocate
+
+   Supports geolocation in config mode and corrections in Freifunk mode
+
+ - ffgt-setup-mode
+
+   Base scripts of our geolocation-aware setup process
+
+
 Further Build Information:
