@@ -25,7 +25,7 @@ GLUON_FEATURES := \
 #		selection that would be enabled by default or due to the
 #		chosen feature flags
 
-GLUON_SITE_PACKAGES := haveged iwinfo gluon-alfred gluon-ssid-changer ffgt-banner
+GLUON_SITE_PACKAGES := haveged iwinfo gluon-alfred gluon-ssid-changer ffgt-banner ffgt-geolocate ffgt-setup-mode
 
 ##	DEFAULT_GLUON_RELEASE
 #		version string to use for images
