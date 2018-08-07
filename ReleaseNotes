@@ -24,5 +24,6 @@ This Freifunk Firmware is based off Gluon v2018.1 and modified by several additi
 
    Base scripts of our geolocation-aware setup process
 
+ - Updated Gluon to v2018.1.x-branch, commit 0cb98882d05924878775196fcdfa600c3d846215
 
 Further Build Information:
