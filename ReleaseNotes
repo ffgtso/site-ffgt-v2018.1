@@ -1,6 +1,6 @@
 Release Notes for gluon-ffgt-@@RELEASE@@
 
-This Freifunk Firmware is based off Gluon v2018.1 and modified by several additional, non-standard modules:
+This Freifunk Firmware is based on Gluon v2018.1.4 and includes some additional modules:
 
  - modified $GLUON/package/gluon-setup-mode/luasrc/lib/gluon/upgrade/320-setup-ifname
    and $GLUON/package/gluon-setup-mode/files/lib/gluon/setup-mode/rc.d/S20network so
@@ -24,6 +24,17 @@ This Freifunk Firmware is based off Gluon v2018.1 and modified by several additi
 
    Base scripts of our geolocation-aware setup process
 
- - Updated Gluon to v2018.1.x-branch, commit 0cb98882d05924878775196fcdfa600c3d846215
+ - ffda-domain-director
+
+   Server-based domain selection based on node's or neighbouring node's coordinates
+
+  - ffda-name-conformizer
+
+    Modify the nodename per firmware upgrade (cosmetic, non-sticking change)
+
+  - tecff-autoupdater-wifi-fallback
+
+    On prolonged lack of connectivity to the mesh, search for freifunk SSIDs and
+    try to become a wireless client, then force autoupdate.
 
 Further Build Information:
