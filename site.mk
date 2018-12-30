@@ -27,6 +27,7 @@ GLUON_FEATURES := \
 #		chosen feature flags
 
 GLUON_SITE_PACKAGES := haveged iwinfo gluon-alfred gluon-ssid-changer ffgt-banner ffgt-geolocate ffgt-setup-mode micrond -crond ffda-domain-director gluon-web-ffda-domain-director ffda-name-conformizer
+
 #gluon-channel-survey
 
 
