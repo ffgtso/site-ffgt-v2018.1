@@ -29,42 +29,42 @@ or v2018.2 (1.1.x) and includes some additional modules:
 
    Server-based domain selection based on node's or neighbouring node's coordinates
 
-  - ffda-name-conformizer
+ - ffda-name-conformizer
 
-    Modify the nodename per firmware upgrade (cosmetic, non-sticking change)
+   Modify the nodename per firmware upgrade (cosmetic, non-sticking change)
 
-  - tecff-autoupdater-wifi-fallback
+ - tecff-autoupdater-wifi-fallback
 
-    On prolonged lack of connectivity to the mesh, search for freifunk SSIDs and
-    try to become a wireless client, then force autoupdate.
+   On prolonged lack of connectivity to the mesh, search for freifunk SSIDs and
+   try to become a wireless client, then force autoupdate.
 
-  - gluon-ebtables-limit-arp
+ - gluon-ebtables-limit-arp
 
-    The gluon-ebtables-limit-arp package adds filters to limit the amount of ARP
-    requests client devices are allowed to send into the mesh.
+   The gluon-ebtables-limit-arp package adds filters to limit the amount of ARP
+   requests client devices are allowed to send into the mesh.
 
-    The limits per client device, identified by its MAC address, are 6 packets per
-    minute and 1 per second per node in total. A burst of up to 50 ARP requests is
-    allowed until the rate-limiting takes effect (see --limit-burst in ebtables(8)).
-    […]
-    It mitigates the impact on the mesh when a larger range of its IPv4 subnet is
-    being scanned, which would otherwise result in a significant amount of ARP chatter,
-    even for unused IP addresses.
+   The limits per client device, identified by its MAC address, are 6 packets per
+   minute and 1 per second per node in total. A burst of up to 50 ARP requests is
+   allowed until the rate-limiting takes effect (see --limit-burst in ebtables(8)).
+   […]
+   It mitigates the impact on the mesh when a larger range of its IPv4 subnet is
+   being scanned, which would otherwise result in a significant amount of ARP chatter,
+   even for unused IP addresses.
 
-  - gluon-ebtables-filter-multicast
+ - gluon-ebtables-filter-multicast
 
-    The gluon-ebtables-filter-multicast package filters out various kinds of
-    non-essential multicast traffic, as this traffic often constitutes a
-    disproportionate burden on the mesh network. Unfortunately, this breaks many
-    useful services (Avahi, Bonjour chat, …), but this seems unavoidable, as the
-    current Avahi implementation is optimized for small local networks and causes
-    too much traffic in large mesh networks.
+   The gluon-ebtables-filter-multicast package filters out various kinds of
+   non-essential multicast traffic, as this traffic often constitutes a
+   disproportionate burden on the mesh network. Unfortunately, this breaks many
+   useful services (Avahi, Bonjour chat, …), but this seems unavoidable, as the
+   current Avahi implementation is optimized for small local networks and causes
+   too much traffic in large mesh networks.
 
-   - gluon-ebtables-filter-ra-dhcp
+ - gluon-ebtables-filter-ra-dhcp
 
-     The gluon-ebtables-filter-ra-dhcp package tries to prevent common
-     misconfigurations (i.e. connecting the client interface of a Gluon node to a
-     private network) from causing issues for either of the networks.
+   The gluon-ebtables-filter-ra-dhcp package tries to prevent common
+   misconfigurations (i.e. connecting the client interface of a Gluon node to a
+   private network) from causing issues for either of the networks.
 
 
 
