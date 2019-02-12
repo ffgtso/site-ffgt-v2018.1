@@ -45,6 +45,7 @@ GLUON_SITE_PACKAGES := \
     ffda-domain-director \
     gluon-web-ffda-domain-director \
   	respondd-module-airtime \
+  	ffgt-preserve-mods \
     ffda-name-conformizer
 
     #gluon-channel-survey
