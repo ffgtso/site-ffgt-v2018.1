@@ -18,8 +18,9 @@ GLUON_FEATURES := \
 	web-advanced \
 	web-wizard \
 	web-private-wifi \
-	web-mesh-vpn-fastd \
 	config-mode-domain-select
+
+#	web-mesh-vpn-fastd \
 
 ##	GLUON_SITE_PACKAGES
 #		Specify additional Gluon/LEDE packages to include here;
