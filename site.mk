@@ -47,7 +47,8 @@ GLUON_SITE_PACKAGES := \
     gluon-web-ffda-domain-director \
   	respondd-module-airtime \
   	ffgt-preserve-mods \
-    ffda-name-conformizer
+    ffda-name-conformizer \
+	respondd-module-airtime
 
     #gluon-channel-survey
 
@@ -141,7 +142,13 @@ USB_PACKAGES_3G := \
 	kmod-usb-serial-wwan \
 	kmod-usb-serial-option \
 	chat \
-	ppp
+	ppp \
+	kmod-usb-net-cdc-ether \
+	kmod-usb-net-cdc-mbim \
+	kmod-usb-net-hso \
+	kmod-usb-net-huawei-cdc-ncm \
+	kmod-usb-net-qmi-wwan \
+	kmod-wireguard
 
 # support for USB GPS devices
 USB_PACKAGES_GPS := \
@@ -157,6 +164,7 @@ USB_PACKAGES_HID := \
 USB_PACKAGES_TETHERING := \
 	kmod-usb-net \
 	kmod-usb-net-asix \
+	kmod-usb-net-asix-ax88179 \
 	kmod-usb-net-dm9601-ether
 
 USB_X86_GENERIC_NETWORK_MODULES := \
@@ -202,6 +210,12 @@ USB_PACKAGES_STORAGE := \
 	kmod-nls-koi8r \
 	kmod-nls-utf8
 
+# support for USB media
+USB_PACKAGES_MEDIA := \
+	kmod-video-core \
+	kmod-video-uvc \
+	kmod-video-pwc
+
 # from ffki-packages:
 #USB_PACKAGES_STORAGE += \
 #	gluon-usb-media \
@@ -220,31 +234,43 @@ ifeq ($(GLUON_TARGET),x86-generic)
 		$(USB_X86_GENERIC_NETWORK_MODULES)
 endif
 
+USB_PACKAGES_MOST := $(USB_PACKAGES_STORAGE)
+USB_PACKAGES_MOST += $(USB_PACKAGES_HID) \
+		$(USB_PACKAGES_TETHERING) \
+		$(USB_PACKAGES_3G) \
+		$(USB_PACKAGES_GPS)\
+		$(USB_PACKAGES_MEDIA)
+
 # use the target names of https://github.com/freifunk-gluon/gluon/blob/master/targets/ar71xx-generic#L163
 ifeq ($(GLUON_TARGET),ar71xx-generic)
-	GLUON_tp-link-tl-wr842n-nd-v1_SITE_PACKAGES := $(USB_PACKAGES_STORAGE)
-	GLUON_tp-link-tl-wr842n-nd-v2_SITE_PACKAGES := $(USB_PACKAGES_STORAGE)
-	GLUON_tp-link-tl-wr842n-nd-v3_SITE_PACKAGES := $(USB_PACKAGES_STORAGE)
-	GLUON_tp-link-tl-wr1043n-nd-v2_SITE_PACKAGES := $(USB_PACKAGES_STORAGE)
-	GLUON_tp-link-tl-wr1043n-nd-v3_SITE_PACKAGES := $(USB_PACKAGES_STORAGE)
-	GLUON_tp-link-tl-wr1043n-nd-v4_SITE_PACKAGES := $(USB_PACKAGES_STORAGE)
-	GLUON_tp-link-tl-wdr4300-v1_SITE_PACKAGES := $(USB_PACKAGES_STORAGE)
-	GLUON_tp-link-tl-wr2543n-nd-v1_SITE_PACKAGES := $(USB_PACKAGES_STORAGE)
-	GLUON_linksys-wrt160nl_SITE_PACKAGES := $(USB_PACKAGES_STORAGE)
-	GLUON_d-link-dir-825-rev-b1_SITE_PACKAGES := $(USB_PACKAGES_STORAGE)
-	GLUON_d-link-dir-505-rev-a1_SITE_PACKAGES := $(USB_PACKAGES_STORAGE)
-	GLUON_d-link-dir-505-rev-a2_SITE_PACKAGES := $(USB_PACKAGES_STORAGE)
-	GLUON_gl-inet-6408a-v1_SITE_PACKAGES := $(USB_PACKAGES_STORAGE)
-	GLUON_gl-inet-6416a-v1_SITE_PACKAGES := $(USB_PACKAGES_STORAGE)
-	GLUON_netgear-wndr3700_SITE_PACKAGES := $(USB_PACKAGES_STORAGE)
-	GLUON_netgear-wndr3700v2_SITE_PACKAGES := $(USB_PACKAGES_STORAGE)
-	GLUON_netgear-wndr3700v4_SITE_PACKAGES := $(USB_PACKAGES_STORAGE)
-	GLUON_buffalo-wzr-hp-g450h_SITE_PACKAGES := $(USB_PACKAGES_STORAGE)
-	GLUON_buffalo-wzr-hp-g300nh_SITE_PACKAGES := $(USB_PACKAGES_STORAGE)
-	GLUON_tp-link-archer-c7-v2_SITE_PACKAGES := $(USB_PACKAGES_STORAGE)
-	GLUON_gl-ar300m_SITE_PACKAGES := $(USB_PACKAGES_STORAGE)
+	GLUON_tp-link-tl-wr842n-nd-v1_SITE_PACKAGES := $(USB_PACKAGES_MOST)
+	GLUON_tp-link-tl-wr842n-nd-v2_SITE_PACKAGES := $(USB_PACKAGES_MOST)
+	GLUON_tp-link-tl-wr842n-nd-v3_SITE_PACKAGES := $(USB_PACKAGES_MOST)
+	GLUON_tp-link-tl-wr1043n-nd-v2_SITE_PACKAGES := $(USB_PACKAGES_MOST)
+	GLUON_tp-link-tl-wr1043n-nd-v3_SITE_PACKAGES := $(USB_PACKAGES_MOST)
+	GLUON_tp-link-tl-wr1043n-nd-v4_SITE_PACKAGES := $(USB_PACKAGES_MOST)
+	GLUON_tp-link-tl-wdr4300-v1_SITE_PACKAGES := $(USB_PACKAGES_MOST)
+	GLUON_tp-link-tl-wdr3600-v1_SITE_PACKAGES := $(USB_PACKAGES_MOST)
+	GLUON_tp-link-tl-wr2543n-nd-v1_SITE_PACKAGES := $(USB_PACKAGES_MOST)
+	GLUON_linksys-wrt160nl_SITE_PACKAGES := $(USB_PACKAGES_MOST)
+	GLUON_d-link-dir-825-rev-b1_SITE_PACKAGES := $(USB_PACKAGES_MOST)
+	GLUON_d-link-dir-505-rev-a1_SITE_PACKAGES := $(USB_PACKAGES_MOST)
+	GLUON_d-link-dir-505-rev-a2_SITE_PACKAGES := $(USB_PACKAGES_MOST)
+	GLUON_gl-inet-6408a-v1_SITE_PACKAGES := $(USB_PACKAGES_MOST)
+	GLUON_gl-inet-6416a-v1_SITE_PACKAGES := $(USB_PACKAGES_MOST)
+	GLUON_netgear-wndr3700_SITE_PACKAGES := $(USB_PACKAGES_MOST)
+	GLUON_netgear-wndr3700v2_SITE_PACKAGES := $(USB_PACKAGES_MOST)
+	GLUON_netgear-wndr3700v4_SITE_PACKAGES := $(USB_PACKAGES_MOST)
+	GLUON_netgear-wndrmacv2_SITE_PACKAGES := $(USB_PACKAGES_MOST)
+	GLUON_buffalo-wzr-hp-g450h_SITE_PACKAGES := $(USB_PACKAGES_MOST)
+	GLUON_buffalo-wzr-hp-g300nh_SITE_PACKAGES := $(USB_PACKAGES_MOST)
+	GLUON_buffalo-wzr-hp-ag300h-wzr-600dhp_SITE_PACKAGES := $(USB_PACKAGES_MOST)
+	GLUON_buffalo-wzr-hp-ag300h_SITE_PACKAGES := $(USB_PACKAGES_MOST)
+	GLUON_tp-link-archer-c7-v2_SITE_PACKAGES := $(USB_PACKAGES_MOST)
+	GLUON_gl-ar300m_SITE_PACKAGES := $(USB_PACKAGES_MOST)
+	GLUON_gl-inet-6416a-v1_SITE_PACKAGES := $(USB_PACKAGES_MOST)
 endif
 
 ifeq ($(GLUON_TARGET),mpc85xx-generic)
-	GLUON_tp-link-tl-wdr4900-v1_SITE_PACKAGES := $(USB_PACKAGES_STORAGE)
+	GLUON_tp-link-tl-wdr4900-v1_SITE_PACKAGES := $(USB_PACKAGES_MOST)
 endif
