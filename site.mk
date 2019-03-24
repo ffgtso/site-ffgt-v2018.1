@@ -148,7 +148,7 @@ USB_PACKAGES_3G := \
 	kmod-usb-net-hso \
 	kmod-usb-net-huawei-cdc-ncm \
 	kmod-usb-net-qmi-wwan \
-	kmod-wireguard
+	tcpdump
 
 # support for USB GPS devices
 USB_PACKAGES_GPS := \
@@ -185,7 +185,11 @@ USB_X86_GENERIC_NETWORK_MODULES := \
 	kmod-tg3 \
 	kmod-via-rhine \
 	kmod-via-velocity \
-	kmod-forcedeth
+	kmod-forcedeth \
+	kmod-wireguard \
+	wireguard-tools \
+	wireguard \
+	tcpdump
 
 # storage support for USB
 USB_PACKAGES_STORAGE := \
@@ -221,6 +225,11 @@ USB_PACKAGES_MEDIA := \
 #	gluon-usb-media \
 #	gluon-config-mode-usb-media
 
+USB_PACKAGES_WIREGUARD := \
+	kmod-wireguard \
+	wireguard-tools \
+	wireguard
+
 # add addition network drivers and usb stuff only to targes where disk space does not matter
 ifeq ($(GLUON_TARGET),x86-generic)
 	# support the USB stack on x86 devices
@@ -239,7 +248,8 @@ USB_PACKAGES_MOST += $(USB_PACKAGES_HID) \
 		$(USB_PACKAGES_TETHERING) \
 		$(USB_PACKAGES_3G) \
 		$(USB_PACKAGES_GPS)\
-		$(USB_PACKAGES_MEDIA)
+		$(USB_PACKAGES_MEDIA) \
+		$(USB_PACKAGES_WIREGUARD)
 
 # use the target names of https://github.com/freifunk-gluon/gluon/blob/master/targets/ar71xx-generic#L163
 ifeq ($(GLUON_TARGET),ar71xx-generic)
@@ -273,4 +283,17 @@ endif
 
 ifeq ($(GLUON_TARGET),mpc85xx-generic)
 	GLUON_tp-link-tl-wdr4900-v1_SITE_PACKAGES := $(USB_PACKAGES_MOST)
+endif
+
+ifeq ($(GLUON_TARGET),ipq40xx)
+	GLUON_avm-fritz-box-4040_SITE_PACKAGES := $(USB_PACKAGES_MOST)
+endif
+
+ifeq ($(GLUON_TARGET),ramips-mt76x8)
+	GLUON_gl-mt300n-v2_SITE_PACKAGES := $(USB_PACKAGES_MOST)
+endif
+
+ifeq ($(GLUON_TARGET),ramips-mt7620)
+	GLUON_gl-mt300n_SITE_PACKAGES := $(USB_PACKAGES_MOST)
+	GLUON_gl-mt300a_SITE_PACKAGES := $(USB_PACKAGES_MOST)
 endif
