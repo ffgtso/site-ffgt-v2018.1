@@ -66,6 +66,10 @@ or v2018.2 (1.1.x) and includes some additional modules:
    misconfigurations (i.e. connecting the client interface of a Gluon node to a
    private network) from causing issues for either of the networks.
 
+ - gluon-tunneldigger-watchdog
+
+   Script that checks every five minutes for the presence of the tunneldigger process,
+   restarting it if neccessary.
 
 
 Known Issues (from Gluon's Release Notes):
