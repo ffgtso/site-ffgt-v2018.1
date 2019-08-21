@@ -48,7 +48,8 @@ GLUON_SITE_PACKAGES := \
   	respondd-module-airtime \
   	ffgt-preserve-mods \
     ffda-name-conformizer \
-	respondd-module-airtime
+	respondd-module-airtime \
+	gluon-web-logging
 
     #gluon-tunneldigger-watchdog -- added in make script!
     #gluon-channel-survey
