@@ -139,8 +139,6 @@ ifeq ($(GLUON_TARGET),ar71xx-tiny)
     GLUON_SITE_PACKAGES += ffka-eol-ssid
 endif
 
-endif
-
 # support for USB UMTS/3G devices
 USB_PACKAGES_3G := \
 	kmod-usb-serial \
