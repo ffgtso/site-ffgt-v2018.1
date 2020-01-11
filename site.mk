@@ -36,7 +36,7 @@ GLUON_SITE_PACKAGES := \
     gluon-ebtables-filter-ra-dhcp \
     haveged \
     iwinfo \
-    gluon-alfred \
+    -gluon-alfred \
     gluon-ssid-changer \
     ffgt-banner \
     ffgt-geolocate \

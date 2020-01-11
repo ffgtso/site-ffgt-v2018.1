@@ -2,7 +2,8 @@ Release Notes for gluon-ffgt-@@RELEASE@@
 ========================================
 
 This Freifunk Firmware is based on Gluon v2018.1.4 (1.0.x)
-or v2018.2 (1.1.x) and includes some additional modules:
+or v2018.2 (1.1.x; as of 2020-01-10 based on v2018.2.4) and
+includes some additional modules:
 
  - modified $GLUON/package/gluon-setup-mode/luasrc/lib/gluon/upgrade/320-setup-ifname
    and $GLUON/package/gluon-setup-mode/files/lib/gluon/setup-mode/rc.d/S20network so
@@ -135,6 +136,7 @@ v2018.1.1:
   Optimizations in Gluon 2018.1 have significantly improved memory usage. There
   are still known bugs leading to unreasonably high load that we hope to solve
   in future releases.
+
 
 
 
