@@ -1,9 +1,14 @@
-Release Notes for gluon-ffgt-@@RELEASE@@
+Release Notes for gluon-4830-@@RELEASE@@
 ========================================
 
 This Freifunk Firmware is based on Gluon v2018.1.4 (1.0.x)
 or v2018.2 (1.1.x; as of 2020-01-10 based on v2018.2.4) and
-includes some additional modules:
+includes some additional modules.
+
+1.0.x: v2018.1.4 based, fastd
+1.1.x: v2018.2.x based, fastd
+1.5.x: v2018.2.x based, L2TP (tunneldigger)
+1.6.x: v2018.2.x based, VXLAN via Wireguard
 
  - modified $GLUON/package/gluon-setup-mode/luasrc/lib/gluon/upgrade/320-setup-ifname
    and $GLUON/package/gluon-setup-mode/files/lib/gluon/setup-mode/rc.d/S20network so
