@@ -136,7 +136,6 @@ FFNORD_GLUON_SITE_PACKAGES += \
 #	some models and targets have to be excluded:
 ifeq ($(GLUON_TARGET),ar71xx-tiny)
 	GLUON_tp-link-tl-wr841n-nd-v7_SITE_PACKAGES = -ffffm-button-bind
-    GLUON_SITE_PACKAGES += ffka-eol-ssid
 endif
 
 # support for USB UMTS/3G devices
