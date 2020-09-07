@@ -29,7 +29,7 @@ GLUON_FEATURES := \
 #		chosen feature flags
 
 GLUON_SITE_PACKAGES := \
-    tecff-autoupdater-wifi-fallback \
+    ffho-autoupdater-wifi-fallback \
     gluon-migrate-vpn \
     gluon-ebtables-limit-arp \
     gluon-ebtables-filter-multicast \
@@ -44,7 +44,6 @@ GLUON_SITE_PACKAGES := \
     micrond \
     -crond \
     ffda-domain-director \
-    gluon-web-ffda-domain-director \
   	respondd-module-airtime \
   	ffgt-preserve-mods \
     ffda-name-conformizer \
@@ -52,6 +51,8 @@ GLUON_SITE_PACKAGES := \
 	ffho-ap-timer \
 	ffho-web-ap-timer \
 	gluon-web-logging
+
+#    gluon-web-ffda-domain-director \
 
     #gluon-tunneldigger-watchdog -- added in make script!
     #gluon-channel-survey
