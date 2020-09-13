@@ -33,7 +33,6 @@ GLUON_SITE_PACKAGES := \
     gluon-migrate-vpn \
     gluon-ebtables-limit-arp \
     gluon-ebtables-filter-multicast \
-    gluon-ebtables-filter-ra-dhcp \
     haveged \
     iwinfo \
     -gluon-alfred \
@@ -52,6 +51,7 @@ GLUON_SITE_PACKAGES := \
 	ffho-web-ap-timer \
 	gluon-web-logging
 
+#    gluon-ebtables-filter-ra-dhcp \
 #    gluon-web-ffda-domain-director \
 
     #gluon-tunneldigger-watchdog -- added in make script!
