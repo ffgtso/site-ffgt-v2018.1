@@ -29,7 +29,7 @@ GLUON_FEATURES := \
 #		chosen feature flags
 
 GLUON_SITE_PACKAGES := \
-    ffho-autoupdater-wifi-fallback \
+    tecff-autoupdater-wifi-fallback \
     gluon-migrate-vpn \
     gluon-ebtables-limit-arp \
     gluon-ebtables-filter-multicast \
