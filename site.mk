@@ -48,7 +48,7 @@ GLUON_SITE_PACKAGES := \
     ffda-name-conformizer \
 	respondd-module-airtime \
 	ffho-ap-timer \
-	ffho-web-ap-timer \
+	ffgt-nachtruhe \
 	gluon-web-logging
 
 #    gluon-ebtables-filter-ra-dhcp \
