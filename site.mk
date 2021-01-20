@@ -41,7 +41,7 @@ GLUON_SITE_PACKAGES := \
     ffgt-geolocate \
     ffgt-setup-mode \
     ffgt-location \
-    ffda-geolocator \
+    ffgt-geolocator \
     micrond \
     -crond \
     ffda-domain-director \
