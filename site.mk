@@ -10,8 +10,9 @@ GLUON_FEATURES := \
 	ebtables-filter-multicast \
 	ebtables-filter-ra-dhcp \
 	ebtables-limit-arp \
-	mesh-batman-adv-14 \
-	mesh-vpn-fastd \
+	mesh-batman-adv-15 \
+	mesh-vpn-tunneldigger \
+	gluon-tunneldigger-watchdog \
 	radvd \
 	respondd \
 	status-page \
@@ -48,7 +49,6 @@ GLUON_SITE_PACKAGES := \
   	respondd-module-airtime \
   	ffgt-preserve-mods \
     ffda-name-conformizer \
-	respondd-module-airtime \
 	ffho-ap-timer \
 	ffgt-nachtruhe \
 	gluon-web-logging
