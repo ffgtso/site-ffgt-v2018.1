@@ -5,6 +5,8 @@
 #		Gluon will automatically enable a set of packages
 #		depending on the combination of features listed
 
+# NOTE: gluon- will be prepended automatically ...
+
 GLUON_FEATURES := \
 	autoupdater \
 	ebtables-filter-multicast \
@@ -12,7 +14,8 @@ GLUON_FEATURES := \
 	ebtables-limit-arp \
 	mesh-batman-adv-15 \
 	mesh-vpn-tunneldigger \
-	gluon-tunneldigger-watchdog \
+	tunneldigger-watchdog \
+    migrate-vpn \
 	radvd \
 	respondd \
 	status-page \
@@ -32,7 +35,6 @@ GLUON_FEATURES := \
 
 GLUON_SITE_PACKAGES := \
     tecff-autoupdater-wifi-fallback \
-    gluon-migrate-vpn \
     gluon-ebtables-limit-arp \
     gluon-ebtables-filter-multicast \
     haveged \
