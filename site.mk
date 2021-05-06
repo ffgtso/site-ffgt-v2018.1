@@ -95,6 +95,8 @@ GLUON_MULTIDOMAIN=1
 
 GLUON_WLAN_MESH=11s #ibss
 
+GLUON_DEPRECATED=upgrade
+
 ###
 # for feature packs see https://github.com/freifunk-gluon/gluon/blob/v2018.1.x/package/features
 FFNORD_GLUON_FEATURES := \
