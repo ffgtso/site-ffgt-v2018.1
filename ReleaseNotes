@@ -6,11 +6,12 @@ or v2018.2 (1.1.x; as of 2020-01-10 based on v2018.2.4) or
 v2019.1 (1.2.x; as of 2021-04-06 based on v2019.1.3) and
 includes some additional modules.
 
-1.0.x: v2018.1.4 based, fastd
-1.1.2: v2018.2.x based, fastd
-1.1.5: v2018.2.x based, L2TP (tunneldigger)
-1.1.6: v2018.2.x based, VXLAN via Wireguard
-1.2.0: v2019.1.x based, L2TP (tunneldigger)
+   1.0.x: v2018.1.4 based, fastd
+   1.1.2: v2018.2.x based, fastd
+   1.1.5: v2018.2.x based, L2TP (tunneldigger)
+   1.1.6: v2018.2.x based, VXLAN via Wireguard
+   1.2.0: v2019.1.x based, L2TP (tunneldigger)
+  [1.4.0: v2020.2.x based, L2TP (tunneldigger)]
 
  - modified $GLUON/package/gluon-setup-mode/luasrc/lib/gluon/upgrade/320-setup-ifname
    and $GLUON/package/gluon-setup-mode/files/lib/gluon/setup-mode/rc.d/S20network so
@@ -24,6 +25,7 @@ includes some additional modules.
    ./package/gluon-status-page/files/lib/gluon/status-page/view/status-page.html
    ./package/gluon-config-mode-core/files/lib/gluon/setup-mode/rc.d/S50uhttpd
    ./package/gluon-respondd/src/respondd.c
+   ./package/gluon-respondd/files/etc/init.d/gluon-respondd (Undoing commit 59a44274cb00e88e3420b4c9c4303ca70f16b211)
 
  - gluon-ssid-changer
 
