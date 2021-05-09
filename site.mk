@@ -97,6 +97,7 @@ GLUON_WLAN_MESH=11s #ibss
 
 GLUON_DEPRECATED=upgrade
 
+GLUON_VERSION = v2013.1.3-ffgt
 ###
 # for feature packs see https://github.com/freifunk-gluon/gluon/blob/v2018.1.x/package/features
 FFNORD_GLUON_FEATURES := \
