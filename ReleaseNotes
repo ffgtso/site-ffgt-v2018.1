@@ -43,6 +43,10 @@ includes some additional modules.
 
    Base scripts of our geolocation-aware setup process
 
+ - ffgt-nachtruhe
+
+   Toggle "Nachtruhe", i. e. disable AP between 22:00 and 06:00 (based on ffho-ap-timer)
+
  - ffda-domain-director
 
    Server-based domain selection based on node's or neighbouring node's coordinates
