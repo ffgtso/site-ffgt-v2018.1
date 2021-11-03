@@ -147,7 +147,10 @@ FFNORD_GLUON_SITE_PACKAGES += \
 #	some models and targets have to be excluded:
 ifeq ($(GLUON_TARGET),ar71xx-tiny)
 	GLUON_tp-link-tl-wr841n-nd-v7_SITE_PACKAGES = -ffffm-button-bind
+else
+    GLUON_SITE_PACKAGES += sipcalc bird6 tcpdump wireguard-tools wireguard
 endif
+
 
 # support for USB UMTS/3G devices
 USB_PACKAGES_3G := \
@@ -160,8 +163,7 @@ USB_PACKAGES_3G := \
 	kmod-usb-net-cdc-mbim \
 	kmod-usb-net-hso \
 	kmod-usb-net-huawei-cdc-ncm \
-	kmod-usb-net-qmi-wwan \
-	tcpdump
+	kmod-usb-net-qmi-wwan
 
 # support for USB GPS devices
 USB_PACKAGES_GPS := \
@@ -199,10 +201,7 @@ USB_X86_GENERIC_NETWORK_MODULES := \
 	kmod-via-rhine \
 	kmod-via-velocity \
 	kmod-forcedeth \
-	kmod-wireguard \
-	wireguard-tools \
-	wireguard \
-	tcpdump
+	kmod-wireguard
 
 # storage support for USB
 USB_PACKAGES_STORAGE := \
@@ -263,13 +262,10 @@ USB_PACKAGES_MOST += $(USB_PACKAGES_HID) \
 		$(USB_PACKAGES_3G) \
 		$(USB_PACKAGES_GPS)\
 		$(USB_PACKAGES_MEDIA) \
-		$(USB_PACKAGES_WIREGUARD) \
-		sipcalc \
-		bird6
+		$(USB_PACKAGES_WIREGUARD)
 
 # use the target names of https://github.com/freifunk-gluon/gluon/blob/master/targets/ar71xx-generic#L163
 ifeq ($(GLUON_TARGET),ar71xx-generic)
-    GLUON_SITE_PACKAGES += $(USB_PACKAGES_MOST)
 #	GLUON_tp-link-tl-wr842n-nd-v1_SITE_PACKAGES := $(USB_PACKAGES_MOST)
 #	GLUON_tp-link-tl-wr842n-nd-v2_SITE_PACKAGES := $(USB_PACKAGES_MOST)
 #	GLUON_tp-link-tl-wr842n-nd-v3_SITE_PACKAGES := $(USB_PACKAGES_MOST)
@@ -299,22 +295,18 @@ ifeq ($(GLUON_TARGET),ar71xx-generic)
 endif
 
 ifeq ($(GLUON_TARGET),mpc85xx-generic)
-    GLUON_SITE_PACKAGES += $(USB_PACKAGES_MOST)
 #	GLUON_tp-link-tl-wdr4900-v1_SITE_PACKAGES := $(USB_PACKAGES_MOST)
 endif
 
 ifeq ($(GLUON_TARGET),ipq40xx)
-    GLUON_SITE_PACKAGES += $(USB_PACKAGES_MOST)
 #	GLUON_avm-fritz-box-4040_SITE_PACKAGES := $(USB_PACKAGES_MOST)
 endif
 
 ifeq ($(GLUON_TARGET),ramips-mt76x8)
-    GLUON_SITE_PACKAGES += $(USB_PACKAGES_MOST)
 #	GLUON_gl-mt300n-v2_SITE_PACKAGES := $(USB_PACKAGES_MOST)
 endif
 
 ifeq ($(GLUON_TARGET),ramips-mt7620)
-    GLUON_SITE_PACKAGES += $(USB_PACKAGES_MOST)
 #	GLUON_gl-mt300n_SITE_PACKAGES := $(USB_PACKAGES_MOST)
 #	GLUON_gl-mt300a_SITE_PACKAGES := $(USB_PACKAGES_MOST)
 endif
