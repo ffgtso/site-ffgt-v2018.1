@@ -228,10 +228,11 @@ USB_PACKAGES_STORAGE := \
 	kmod-nls-utf8
 
 # support for USB media
-USB_PACKAGES_MEDIA := \
-	kmod-video-core \
-	kmod-video-uvc \
-	kmod-video-pwc
+#USB_PACKAGES_MEDIA := \
+#	kmod-video-core \
+#	kmod-video-uvc \
+#	kmod-video-pwc
+USB_PACKAGES_MEDIA :=
 
 # from ffki-packages:
 #USB_PACKAGES_STORAGE += \
