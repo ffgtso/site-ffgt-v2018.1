@@ -148,7 +148,7 @@ FFNORD_GLUON_SITE_PACKAGES += \
 ifeq ($(GLUON_TARGET),ar71xx-tiny)
 	GLUON_tp-link-tl-wr841n-nd-v7_SITE_PACKAGES = -ffffm-button-bind
 else
-    GLUON_SITE_PACKAGES += sipcalc bird6 tcpdump wireguard-tools wireguard
+    GLUON_SITE_PACKAGES += sipcalc bird6 birdc6 tcpdump wireguard-tools wireguard
 endif
 
 
