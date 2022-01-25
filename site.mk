@@ -54,7 +54,8 @@ GLUON_SITE_PACKAGES := \
     ffda-name-conformizer \
 	ffho-ap-timer \
 	ffgt-nachtruhe \
-	gluon-web-logging
+	gluon-web-logging \
+	gluon-migrate-ffbi
 
 #    gluon-ebtables-filter-ra-dhcp \
 #    gluon-web-ffda-domain-director \
