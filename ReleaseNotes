@@ -10,7 +10,7 @@ includes some additional modules.
    1.1.2: v2018.2.x based, fastd
    1.1.5: v2018.2.x based, L2TP (tunneldigger)
    1.1.6: v2018.2.x based, VXLAN via Wireguard
-   1.2.0: v2019.1.x based, L2TP (tunneldigger)
+   1.2.0: v2019.1.x based, L2TP (tunneldigger) (>= 1.2.0~38 includes gluon-migrate-ffbi)
   [1.4.0: v2020.2.x based, L2TP (tunneldigger)]
 
  - modified $GLUON/package/gluon-setup-mode/luasrc/lib/gluon/upgrade/320-setup-ifname
@@ -93,6 +93,9 @@ includes some additional modules.
    Script that checks every five minutes for the presence of the tunneldigger process,
    restarting it if neccessary.
 
+ - gluon-migrate-ffbi
+
+   Migrates nodename, coordinates, ... from FFBI-Firmware to Gluon
 
 Known Issues (from Gluon's Release Notes):
 ==========================================
