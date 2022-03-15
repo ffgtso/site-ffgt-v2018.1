@@ -55,6 +55,7 @@ GLUON_SITE_PACKAGES := \
 	ffho-ap-timer \
 	ffgt-nachtruhe \
 	gluon-web-logging \
+	ffgt-speedtest \
 	gluon-migrate-ffbi
 
 #    gluon-ebtables-filter-ra-dhcp \
