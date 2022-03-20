@@ -55,7 +55,6 @@ GLUON_SITE_PACKAGES := \
 	ffho-ap-timer \
 	ffgt-nachtruhe \
 	gluon-web-logging \
-	ffgt-speedtest \
 	gluon-migrate-ffbi
 
 #    gluon-ebtables-filter-ra-dhcp \
@@ -150,7 +149,7 @@ FFNORD_GLUON_SITE_PACKAGES += \
 ifeq ($(GLUON_TARGET),ar71xx-tiny)
 	GLUON_tp-link-tl-wr841n-nd-v7_SITE_PACKAGES = -ffffm-button-bind
 else
-    GLUON_SITE_PACKAGES += sipcalc bird6 birdc6 tcpdump wireguard-tools wireguard
+    GLUON_SITE_PACKAGES += sipcalc bird6 birdc6 tcpdump wireguard-tools wireguard ffgt-speedtest
 endif
 
 
