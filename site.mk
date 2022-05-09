@@ -56,7 +56,8 @@ GLUON_SITE_PACKAGES := \
 	ffgt-nachtruhe \
 	gluon-web-logging \
 	gluon-migrate-ffbi \
-    gluon-radv-filterd
+    gluon-radv-filterd \
+    ffgt-speedtest
 
 #    gluon-ebtables-filter-ra-dhcp \
 #    gluon-web-ffda-domain-director \
@@ -150,7 +151,7 @@ FFNORD_GLUON_SITE_PACKAGES += \
 ifeq ($(GLUON_TARGET),ar71xx-tiny)
 	GLUON_tp-link-tl-wr841n-nd-v7_SITE_PACKAGES = -ffffm-button-bind
 else
-    GLUON_SITE_PACKAGES += sipcalc bird6 birdc6 tcpdump wireguard-tools wireguard ffgt-speedtest
+    GLUON_SITE_PACKAGES += sipcalc bird6 birdc6 tcpdump wireguard-tools wireguard
 endif
 
 
