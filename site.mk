@@ -34,6 +34,7 @@ GLUON_FEATURES := \
 #		chosen feature flags
 
 GLUON_SITE_PACKAGES := \
+    ffgt-tunneldigger \
     tecff-autoupdater-wifi-fallback \
     gluon-ebtables-limit-arp \
     gluon-ebtables-filter-multicast \
@@ -101,57 +102,12 @@ GLUON_WLAN_MESH=11s #ibss
 GLUON_DEPRECATED=upgrade
 
 GLUON_VERSION = v2013.1.3-ffgt
-###
-# for feature packs see https://github.com/freifunk-gluon/gluon/blob/v2018.1.x/package/features
-FFNORD_GLUON_FEATURES := \
-	web-private-wifi \
-	ebtables-limit-arp \
-	ebtables-filter-multicast \
-	ebtables-filter-ra-dhcp \
-	mesh-batman-adv-15 \
-	mesh-vpn-fastd \
-	radvd \
-	radv-filterd \
-	respondd \
-	web-mesh-vpn-fastd \
-	status-page \
-	web-advanced \
-	web-wizard \
-	autoupdater
-
-FFNORD_GLUON_SITE_PACKAGES := \
-	respondd-module-airtime \
-	iwinfo \
-	iptables \
-	haveged
-
-# from sargon:
-FFNORDGLUON_SITE_PACKAGES += \
-	roamguide
-#	ddhcpd
-
-# from https://github.com/Freifunk-Nord/eulenfunk-packages
-FFNORD_GLUON_SITE_PACKAGES += \
-	gluon-quickfix
-
-# from https://github.com/Freifunk-Nord/gluon-ssid-changer:
-FFNORD_GLUON_SITE_PACKAGES += \
-	gluon-ssid-changer
-
-# from ffki-packages:
-FFNORD_GLUON_SITE_PACKAGES += \
-	gluon-config-mode-ppa \
-#	gluon-config-mode-contact-info-anonymous-hint
-
-# from ffm-packages
-FFNORD_GLUON_SITE_PACKAGES += \
-	ffffm-button-bind
 
 #	some models and targets have to be excluded:
 ifeq ($(GLUON_TARGET),ar71xx-tiny)
 	GLUON_tp-link-tl-wr841n-nd-v7_SITE_PACKAGES = -ffffm-button-bind
 else
-    GLUON_SITE_PACKAGES += sipcalc tcpdump wireguard-tools wireguard mtr
+    GLUON_SITE_PACKAGES += sipcalc tcpdump mtr
 endif
 
 
