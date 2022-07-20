@@ -107,7 +107,7 @@ GLUON_VERSION = v2013.1.3-ffgt
 ifeq ($(GLUON_TARGET),ar71xx-tiny)
 	GLUON_tp-link-tl-wr841n-nd-v7_SITE_PACKAGES = -ffffm-button-bind
 else
-    GLUON_SITE_PACKAGES += sipcalc tcpdump mtr
+    GLUON_SITE_PACKAGES += tcpdump mtr
 endif
 
 
