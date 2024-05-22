@@ -12,7 +12,7 @@ GLUON_FEATURES := \
 	ebtables-filter-multicast \
 	ebtables-filter-ra-dhcp \
 	ebtables-limit-arp \
-	mesh-batman-adv-15 \
+	mesh-batman-adv-14 \
 	mesh-vpn-tunneldigger \
 	tunneldigger-watchdog \
     migrate-vpn \
@@ -93,15 +93,15 @@ GLUON_PRIORITY ?= 0
 GLUON_REGION ?= eu
 
 # Languages to include
-GLUON_LANGS ?= en de
+GLUON_LANGS ?= de en
 
 GLUON_MULTIDOMAIN=1
 
-GLUON_WLAN_MESH=11s #ibss
+#GLUON_WLAN_MESH=11s #ibss
 
 GLUON_DEPRECATED=upgrade
 
-GLUON_VERSION = v2013.1.3-ffgt
+GLUON_VERSION = v2019.1-ffgt
 
 #	some models and targets have to be excluded:
 ifeq ($(GLUON_TARGET),ar71xx-tiny)
