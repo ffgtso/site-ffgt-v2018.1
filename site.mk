@@ -33,7 +33,6 @@ GLUON_FEATURES := \
 #		chosen feature flags
 
 GLUON_SITE_PACKAGES := \
-    ffgt-tunneldigger \
     tecff-autoupdater-wifi-fallback \
     gluon-ebtables-limit-arp \
     gluon-ebtables-filter-multicast \
@@ -57,7 +56,8 @@ GLUON_SITE_PACKAGES := \
 	gluon-web-logging \
 	gluon-migrate-ffbi \
     gluon-radv-filterd \
-    ffgt-speedtest
+    ffgt-speedtest \
+    ffue-migrate-to-multidomain
 
 #    gluon-ebtables-filter-ra-dhcp \
 #    gluon-web-ffda-domain-director \
