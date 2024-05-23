@@ -13,8 +13,7 @@ GLUON_FEATURES := \
 	ebtables-filter-ra-dhcp \
 	ebtables-limit-arp \
 	mesh-batman-adv-14 \
-	mesh-vpn-tunneldigger \
-	tunneldigger-watchdog \
+	mesh-vpn-fastd \
     migrate-vpn \
 	radvd \
 	respondd \
