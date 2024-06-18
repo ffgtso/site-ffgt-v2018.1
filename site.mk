@@ -12,7 +12,7 @@ GLUON_FEATURES := \
 	ebtables-filter-multicast \
 	ebtables-filter-ra-dhcp \
 	ebtables-limit-arp \
-	mesh-batman-adv-14 \
+	mesh-batman-adv \
 	mesh-vpn-fastd \
     migrate-vpn \
 	radvd \
@@ -54,10 +54,10 @@ GLUON_SITE_PACKAGES := \
 	ffho-ap-timer \
 	ffgt-nachtruhe \
 	gluon-web-logging \
-	gluon-migrate-ffbi \
     gluon-radv-filterd \
     ffgt-speedtest \
-    ffue-migrate-to-multidomain
+    ffhlg-migrate-to-multidomain
+#    ffue-migrate-to-multidomain \
 
 #    gluon-ebtables-filter-ra-dhcp \
 #    gluon-web-ffda-domain-director \
