@@ -56,7 +56,7 @@ GLUON_SITE_PACKAGES := \
 	gluon-web-logging \
     gluon-radv-filterd \
     ffgt-speedtest \
-    ffhlg-migrate-to-multidomain
+    ffhgl-migrate-to-multidomain
 #    ffue-migrate-to-multidomain \
 
 #    gluon-ebtables-filter-ra-dhcp \
