@@ -38,7 +38,6 @@ GLUON_SITE_PACKAGES := \
     gluon-ebtables-filter-multicast \
     haveged \
     iwinfo \
-    -gluon-alfred \
     gluon-ssid-changer \
     ffgt-banner \
     ffgt-geolocate \
@@ -56,6 +55,7 @@ GLUON_SITE_PACKAGES := \
 	gluon-web-logging \
     gluon-radv-filterd \
     ffgt-speedtest \
+    gluon-alfred \
     ffhgl-migrate-to-multidomain
 #    ffue-migrate-to-multidomain \
 
