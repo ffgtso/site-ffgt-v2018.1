@@ -33,7 +33,7 @@ GLUON_FEATURES := \
 #		chosen feature flags
 
 GLUON_SITE_PACKAGES := \
-    ffgt-autoupdater-wifi-fallback \
+    gluon-autoupdater-wifi-fallback \
     gluon-ebtables-limit-arp \
     gluon-ebtables-filter-multicast \
     haveged \
