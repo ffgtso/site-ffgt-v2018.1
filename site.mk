@@ -33,12 +33,12 @@ GLUON_FEATURES := \
 #		chosen feature flags
 
 GLUON_SITE_PACKAGES := \
-    gluon-autoupdater-wifi-fallback \
+    ffgt-autoupdater-wifi-fallback \
     gluon-ebtables-limit-arp \
     gluon-ebtables-filter-multicast \
     haveged \
     iwinfo \
-    ffgt-ssid-changer \
+    gluon-ssid-changer \
     ffgt-banner \
     ffgt-geolocate \
     ffgt-setup-mode \
