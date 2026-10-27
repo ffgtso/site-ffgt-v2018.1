@@ -13,7 +13,7 @@ GLUON_FEATURES := \
 	ebtables-filter-ra-dhcp \
 	ebtables-limit-arp \
 	mesh-batman-adv-15 \
-	mesh-vpn-fastd \
+	mesh-vpn-tunneldigger \
     migrate-vpn \
 	radvd \
 	respondd \
@@ -33,12 +33,12 @@ GLUON_FEATURES := \
 #		chosen feature flags
 
 GLUON_SITE_PACKAGES := \
-    tecff-autoupdater-wifi-fallback \
+    ffgt-autoupdater-wifi-fallback \
     gluon-ebtables-limit-arp \
     gluon-ebtables-filter-multicast \
     haveged \
     iwinfo \
-    gluon-ssid-changer \
+    ffgt-ssid-changer \
     ffgt-banner \
     ffgt-geolocate \
     ffgt-setup-mode \
@@ -56,14 +56,8 @@ GLUON_SITE_PACKAGES := \
     gluon-radv-filterd \
     ffgt-speedtest \
     gluon-alfred \
-    ffhgl-migrate-to-multidomain
-#    ffue-migrate-to-multidomain \
-
-#    gluon-ebtables-filter-ra-dhcp \
-#    gluon-web-ffda-domain-director \
-
-    #gluon-tunneldigger-watchdog -- added in make script!
-    #gluon-channel-survey
+    ffX-migrate-to-4830 \
+    gluon-tunneldigger-watchdog
 
 
 ##	DEFAULT_GLUON_RELEASE
@@ -96,18 +90,18 @@ GLUON_LANGS ?= de en
 
 GLUON_MULTIDOMAIN=1
 
-GLUON_WLAN_MESH=11s #ibss
+GLUON_WLAN_MESH=ibss #11s #ibss
 
 GLUON_DEPRECATED=upgrade
 
-GLUON_VERSION = v2019.1-ffgt
+GLUON_VERSION = v2018.2.4-ffgt
 
 #	some models and targets have to be excluded:
-ifeq ($(GLUON_TARGET),ar71xx-tiny)
-	GLUON_tp-link-tl-wr841n-nd-v7_SITE_PACKAGES = -ffffm-button-bind
-else
-    GLUON_SITE_PACKAGES += tcpdump mtr ip-full
-endif
+#ifeq ($(GLUON_TARGET),ar71xx-tiny)
+#	GLUON_tp-link-tl-wr841n-nd-v7_SITE_PACKAGES = -ffffm-button-bind
+#else
+#    GLUON_SITE_PACKAGES += tcpdump mtr ip-full
+#endif
 
 
 # support for USB UMTS/3G devices
