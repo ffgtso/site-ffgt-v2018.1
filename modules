@@ -21,11 +21,11 @@
 #   the branch to check out
 
 
-GLUON_SITE_FEEDS="ssidchanger ffgt"
-PACKAGES_SSIDCHANGER_REPO=https://github.com/freifunk-nord/gluon-ssid-changer.git
-PACKAGES_SSIDCHANGER_COMMIT=a1a0dd80e4b5abf17ee689bbabaaf436033668b6
-#222b96a30259a03ca8ecdb173d9d326077a6efec
-PACKAGES_SSIDCHANGER_BRANCH=2018.1.x
+#GLUON_SITE_FEEDS="ssidchanger ffgt"
+#PACKAGES_SSIDCHANGER_REPO=https://github.com/freifunk-nord/gluon-ssid-changer.git
+#PACKAGES_SSIDCHANGER_COMMIT=a1a0dd80e4b5abf17ee689bbabaaf436033668b6
+##222b96a30259a03ca8ecdb173d9d326077a6efec
+#PACKAGES_SSIDCHANGER_BRANCH=2018.1.x
 
 PACKAGES_FFGT_REPO=https://github.com/ffgtso/ffgt_packages-v2018.1.git
 PACKAGES_FFGT_COMMIT=LATEST
